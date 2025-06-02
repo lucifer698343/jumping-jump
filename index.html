@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Jump the Block</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Start Menu -->
+  <div id="startScreen" class="start-screen">
+
+  <img id="avatar" src="https://scontent.fktm17-1.fna.fbcdn.net/m1/v/t6/An9WH74jnjyHg0qZJSS1eRh7-U-gZZ1t-WiVo25sxgUUMyTbnd137za1UPqC2sHO1g7Btr7Z9mp4TM2il1MNI4Tpo5JyC3veOeok0p4BYt-C4HU.webp?_nc_gid=WWlKAUTJIkBNTmRVZI3d_A&_nc_oc=Adk4Nn8TO23Hi6quNvgwfFWxgdXzT2htuRA_7ooTD2DrbW3XVUsP_Gtt3ZTjLzEGCx-DBBfTQ94WAXX10Ckipb1p&strext=1&ccb=10-5&oh=00_AfIS2peikPv2vylbQZ75WdPA_tTzGCDEf8S01ywq_rmATg&oe=683E638E&_nc_sid=fdc050" alt="Avatar">
+  <h1 class="game-title">Jump The Block</h1>
+  <h2>Creator:Aayush Kathayat</h2>
+  <p class="instructions">
+    Press <span class="key">Space</span> or tap to jump.
+    Hold the screen or <span class="key">Space </span>for higher jump<br />
+    Avoid the obstacles and score points!
+  </p>
+  <button id="startButton" class="start-btn">Start Game</button>
+  
+</div>
+
+  <!-- Game Area -->
+  <div class="game" id="gameContainer" style="display: none;">
+    <div id="gameContainer">
+  <!-- Your game elements here -->
+  <button id="modeToggle" title="Toggle Dark Mode">
+    🌙
+  </button>
+</div>
+
+    <div class="cloud"></div> 
+    <div class="ground"></div>
+
+    <!-- Player (ball or character) -->
+    <div id="player"></div>
+
+    <!-- Obstacle (can be ball or animated block) -->
+    <div id="obstacle" class="obstacle"></div>
+
+    <!-- Game Over Text and Buttons -->
+    <div id="gameOverText">Game Over</div>
+    <button id="restartButton" onclick="restartGame()">Restart</button>
+
+    <!-- Score Board -->
+    <div id="score">Score: 0</div>
+    
+  </div>
+
+  <!-- Audio elements -->
+  <audio id="jumpSound" src="jump.mp3" preload="auto"></audio>
+  <audio id="gameOverSound" src="gameover.mp3" preload="auto"></audio>
+  <audio id="bgMusic" src="background.mp3" loop></audio>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
